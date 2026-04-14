@@ -1,4 +1,4 @@
-/* GLOBAL */
+* GLOBAL */
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
@@ -41,36 +41,6 @@ nav ul li a:hover {
     height: 80vh;
     object-fit: cover;
     filter: brightness(0.6); /* darker tech feel */
-}
-.hero {
-    position: relative;
-}
-
-.hero-text {
-    position: absolute;
-    top: 40%;
-    left: 10%;
-    color: white;
-    max-width: 400px;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-}
-
-.tag {
-    background: red;
-    color: white;
-    padding: 5px 10px;
-    font-size: 12px;
-    border-radius: 5px;
-    position: absolute;
 }
 
 /* ABOUT */
@@ -126,13 +96,13 @@ nav ul li a:hover {
 
 /* HOVER EFFECT */
 .menu-item:hover {
-    transform: translateY(-10px) scale(1.25);
+    transform: translateY(-10px) scale(1.05);
 }
 
 /* IMAGE */
 .menu-item img {
     width: 100%;
-    height: 200px;
+    height: 160px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -151,7 +121,7 @@ nav ul li a:hover {
 /* HOURS */
 .hours {
     background: #020617;
-    color: #e5e7eb;
+    color: #d8e4fa;
     text-align: center;
     padding: 2em;
 }
