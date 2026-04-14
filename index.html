@@ -3,133 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive gadget storefront powered by live public API product data.">
     <title>Keith Tech Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Main navigation">
+            <a class="brand-mark" href="index.html">Keith Tech Store</a>
+            <ul class="nav-links">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#products">Products</a></li>
+            </ul>
+        </nav>
 
-<!-- NAVBAR -->
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#products">Products</a></li>
-    </ul>
-</nav>
+        <section class="hero layout-shell">
+            <div class="hero-copy">
+                <p class="eyebrow">Responsive electronics storefront</p>
+                <h1>Find reliable tech picks curated from a live product feed.</h1>
+                <p class="hero-summary">
+                    This front-end uses the Fake Store API to showcase featured items, prices,
+                    and categories in a mobile-friendly shopping layout built with vanilla HTML,
+                    CSS, and JavaScript.
+                </p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#products">Browse products</a>
+                    <a class="button button-secondary" href="about.html">Why this store</a>
+                </div>
+            </div>
 
-<!-- HERO SECTION -->
-<header class="hero">
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600" alt="Tech Store">
+            <aside class="hero-panel" aria-label="Store highlights">
+                <h2>Store snapshot</h2>
+                <dl class="hero-metrics">
+                    <div>
+                        <dt>API source</dt>
+                        <dd>Fake Store API</dd>
+                    </div>
+                    <div>
+                        <dt>Design rule</dt>
+                        <dd>3-color palette</dd>
+                    </div>
+                    <div>
+                        <dt>Typography</dt>
+                        <dd>3 font families</dd>
+                    </div>
+                </dl>
+            </aside>
+        </section>
+    </header>
 
-    <div class="hero-text">
-        <h1>Upgrade Your Tech Life</h1>
-        <p>Laptops • Phones • TVs • Accessories — all in one place</p>
-        <a href="#products" class="btn">Shop Now</a>
-    </div>
-</header>
+    <main>
+        <section class="feature-strip layout-shell" aria-label="Store benefits">
+            <article class="feature-card">
+                <h2>Live inventory feel</h2>
+                <p>Products are fetched in real time instead of being hard-coded into the page.</p>
+            </article>
+            <article class="feature-card">
+                <h2>Responsive layout</h2>
+                <p>Grid sections adapt smoothly from phones to large desktop screens.</p>
+            </article>
+            <article class="feature-card">
+                <h2>Vanilla stack</h2>
+                <p>No CSS framework is used, keeping the styling custom and lightweight.</p>
+            </article>
+        </section>
 
-<!-- ABOUT SHORT SECTION -->
-<section class="about">
-    <h1>Welcome to Keith Tech Store</h1>
-    <p>
-        We provide modern, affordable and high-quality electronics including laptops,
-        smartphones, gaming gear and accessories.
-    </p>
-</section>
+        <section class="catalog layout-shell" id="products">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Featured catalog</p>
+                    <h2>Explore popular electronics and lifestyle devices</h2>
+                </div>
+                <label class="search-field" for="product-search">
+                    <span>Search products</span>
+                    <input id="product-search" name="product-search" type="search" placeholder="Search by name or category">
+                </label>
+            </div>
 
-<!-- PRODUCTS -->
-<section class="menu" id="products">
-    <h2>Featured Products</h2>
+            <div class="status-banner" id="status-banner" role="status" aria-live="polite">
+                Loading products from the public API...
+            </div>
 
-    <div class="menu-items">
+            <div class="product-grid" id="product-grid" aria-live="polite"></div>
+            <noscript>
+                <p class="status-banner">Enable JavaScript to load products from the public API.</p>
+            </noscript>
+        </section>
+    </main>
 
-        <div class="menu-item">
-            <span class="tag">HOT</span>
-            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500" alt="Laptop">
-            <h3>Laptop</h3>
-            <p>High-performance laptops for work and gaming.</p>
+    <footer class="site-footer">
+        <div class="layout-shell footer-shell">
+            <div>
+                <p class="footer-title">Keith Tech Store</p>
+                <p>Built with vanilla CSS, reusable JavaScript modules, and a GitHub Actions deployment workflow.</p>
+            </div>
+            <p>&copy; 2026 Keith Tech Store</p>
         </div>
+    </footer>
 
-        <div class="menu-item">
-            <span class="tag">NEW</span>
-            <img src="https://images.unsplash.com/photo-1573148195900-7845dcb9b127?w=500" alt="iPhone">
-            <h3>iPhone</h3>
-            <p>Latest Apple smartphones with premium features.</p>
-        </div>
-
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1707438095940-1eee18e85400?w=500" alt="Android">
-            <h3>Android Phones</h3>
-            <p>Affordable and powerful Android devices.</p>
-        </div>
-
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=500" alt="TV">
-            <h3>Smart TV</h3>
-            <p>Ultra HD entertainment experience.</p>
-        </div>
-
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?w=500" alt="Headphones">
-            <h3>Headphones</h3>
-            <p>Immersive sound quality wireless headphones.</p>
-        </div>
-
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=500" alt="Gaming">
-            <h3>Gaming Console</h3>
-            <p>Next-gen gaming experience at home.</p>
-        </div>
-
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1635896383799-06e1e0accda0?w=500" alt="Keyboard">
-            <h3>Keyboard</h3>
-            <p>Mechanical keyboards for productivity.</p>
-        </div>
-
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=500" alt="Smartwatch">
-            <h3>Smartwatch</h3>
-            <p>Track fitness and notifications easily.</p>
-        </div>
-
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1589003077984-894e133dabab?w=500" alt="Speaker">
-            <h3>Bluetooth Speaker</h3>
-            <p>Portable sound with deep bass.</p>
-        </div>
-
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500" alt="Monitor">
-            <h3>Monitor</h3>
-            <p>High-resolution display for work and gaming.</p>
-        </div>
-             
-        <div class="menu-item">
-            <img src="https://images.unsplash.com/photo-1512499617640-c2f999fe8c9e?w=500" alt="Tablet">
-            <h3>Tablet</h3>
-            <p>Portable and powerful tablets for on-the-go use.</p>
-    </div>
-</section>
-
-<!-- STORE HOURS -->
-<section class="hours">
-    <h2>Store Hours</h2>
-    <p>Mon - Fri: 8AM - 9PM</p>
-    <p>Sat: 9AM - 10PM</p>
-    <p>Sun: 10AM - 8PM</p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>&copy; 2026 Keith Tech Store</p>
-    <p>
-        <a href="#">Facebook</a> |
-        <a href="#">Instagram</a> |
-        <a href="#">Twitter</a>
-    </p>
-</footer>
-
+    <script type="module" src="scripts/app.js"></script>
 </body>
 </html>
