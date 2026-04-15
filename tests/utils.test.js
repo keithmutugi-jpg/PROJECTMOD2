@@ -4,6 +4,7 @@ import {
     filterProducts,
     formatCurrency,
     getAveragePrice,
+    isTechProduct,
     getTopCategory,
     getUniqueCategories,
     truncateText
@@ -17,6 +18,11 @@ const sampleProducts = [
 
 test("formatCurrency returns a USD string", () => {
     assert.equal(formatCurrency(25), "$25.00");
+});
+
+test("isTechProduct returns true only for electronics items", () => {
+    assert.equal(isTechProduct(sampleProducts[0]), true);
+    assert.equal(isTechProduct(sampleProducts[2]), false);
 });
 
 test("getUniqueCategories returns distinct categories", () => {

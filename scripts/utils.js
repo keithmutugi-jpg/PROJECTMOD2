@@ -5,6 +5,10 @@ export function formatCurrency(amount) {
     }).format(amount);
 }
 
+export function isTechProduct(product) {
+    return product.category === "electronics";
+}
+
 export function getUniqueCategories(products) {
     return [...new Set(products.map((product) => product.category))];
 }

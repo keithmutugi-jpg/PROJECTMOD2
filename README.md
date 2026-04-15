@@ -5,7 +5,7 @@ A simple front-end project built with HTML, vanilla CSS, and JavaScript.
 ## Main Features
 
 - Responsive layout for mobile, tablet, and desktop
-- Product data loaded from the public Fake Store API
+- Electronics product data loaded from the public Fake Store API
 - Complementary color palette with three main colors
 - Three font families from Google Fonts
 - Unit tests for JavaScript helper functions
@@ -30,4 +30,4 @@ npm test
 
 ## Public API Used
 
-- https://fakestoreapi.com/products
+- https://fakestoreapi.com/products/category/electronics
