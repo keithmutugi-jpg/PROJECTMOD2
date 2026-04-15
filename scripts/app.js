@@ -9,55 +9,67 @@ import {
 } from "./utils.js";
 import "./nav.js";
 
-const productGrid = document.querySelector("#product-grid");
-const feedbackMessage = document.querySelector("#feedback-message");
-const searchInput = document.querySelector("#search-input");
-const categoryFilter = document.querySelector("#category-filter");
-const productCount = document.querySelector("#product-count");
-const categoryCount = document.querySelector("#category-count");
-const topCategory = document.querySelector("#top-category");
-const averagePrice = document.querySelector("#average-price");
-const dataStatus = document.querySelector("#data-status");
+const elements = {
+    productGrid: document.querySelector("#product-grid"),
+    feedbackMessage: document.querySelector("#feedback-message"),
+    searchInput: document.querySelector("#search-input"),
+    categoryFilter: document.querySelector("#category-filter"),
+    productCount: document.querySelector("#product-count"),
+    categoryCount: document.querySelector("#category-count"),
+    topCategory: document.querySelector("#top-category"),
+    averagePrice: document.querySelector("#average-price"),
+    dataStatus: document.querySelector("#data-status")
+};
 
 let allProducts = [];
 
-function refreshDisplay() {
-    const visibleProducts = filterProducts(allProducts, searchInput.value, categoryFilter.value);
+function showProducts(products) {
+    renderProducts(elements.productGrid, products);
+    updateText(elements.productCount, String(products.length));
+    updateText(elements.averagePrice, formatCurrency(getAveragePrice(products)));
 
-    renderProducts(productGrid, visibleProducts);
-    updateText(productCount, String(visibleProducts.length));
-    updateText(averagePrice, formatCurrency(getAveragePrice(visibleProducts)));
-
-    if (visibleProducts.length) {
-        updateText(feedbackMessage, `Showing ${visibleProducts.length} product(s).`);
+    if (products.length) {
+        updateText(elements.feedbackMessage, `Showing ${products.length} product(s).`);
     } else {
-        updateText(feedbackMessage, "No products match your search right now.");
+        updateText(elements.feedbackMessage, "No products match your search right now.");
     }
+}
+
+function updateSummary(products, categories) {
+    updateText(elements.productCount, String(products.length));
+    updateText(elements.categoryCount, String(categories.length));
+    updateText(elements.topCategory, getTopCategory(products));
+    updateText(elements.averagePrice, formatCurrency(getAveragePrice(products)));
+}
+
+function refreshDisplay() {
+    const searchTerm = elements.searchInput.value;
+    const selectedCategory = elements.categoryFilter.value;
+    const visibleProducts = filterProducts(allProducts, searchTerm, selectedCategory);
+
+    showProducts(visibleProducts);
 }
 
 async function startApp() {
     try {
-        updateText(dataStatus, "Loading");
+        updateText(elements.dataStatus, "Loading");
         allProducts = await fetchProducts();
 
         const categories = getUniqueCategories(allProducts);
-        renderCategoryOptions(categoryFilter, categories);
-        renderProducts(productGrid, allProducts);
+        renderCategoryOptions(elements.categoryFilter, categories);
+        showProducts(allProducts);
+        updateSummary(allProducts, categories);
 
-        updateText(productCount, String(allProducts.length));
-        updateText(categoryCount, String(categories.length));
-        updateText(topCategory, getTopCategory(allProducts));
-        updateText(averagePrice, formatCurrency(getAveragePrice(allProducts)));
-        updateText(dataStatus, "Ready");
-        updateText(feedbackMessage, "Products loaded successfully.");
+        updateText(elements.dataStatus, "Ready");
+        updateText(elements.feedbackMessage, "Products loaded successfully.");
     } catch (error) {
-        updateText(dataStatus, "Error");
-        updateText(feedbackMessage, error.message);
-        productGrid.innerHTML = "";
+        updateText(elements.dataStatus, "Error");
+        updateText(elements.feedbackMessage, error.message);
+        elements.productGrid.innerHTML = "";
     }
 }
 
-searchInput.addEventListener("input", refreshDisplay);
-categoryFilter.addEventListener("change", refreshDisplay);
+elements.searchInput.addEventListener("input", refreshDisplay);
+elements.categoryFilter.addEventListener("change", refreshDisplay);
 
 startApp();

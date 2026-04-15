@@ -1,6 +1,8 @@
 import { formatCurrency, truncateText } from "./utils.js";
 
 export function createProductCard(product) {
+    const rating = product.rating ? product.rating.rate : "N/A";
+
     return `
         <article class="product-card">
             <div class="product-image">
@@ -9,7 +11,7 @@ export function createProductCard(product) {
             <div class="product-body">
                 <div class="product-meta">
                     <span class="price-tag">${formatCurrency(product.price)}</span>
-                    <span class="rating-tag">Rate ${product.rating?.rate ?? "N/A"}</span>
+                    <span class="rating-tag">Rate ${rating}</span>
                 </div>
                 <h3>${product.title}</h3>
                 <p>${truncateText(product.description, 110)}</p>
@@ -23,10 +25,13 @@ export function renderProducts(container, products) {
 }
 
 export function renderCategoryOptions(selectElement, categories) {
-    selectElement.innerHTML = `
-        <option value="all">All categories</option>
-        ${categories.map((category) => `<option value="${category}">${category}</option>`).join("")}
-    `;
+    let options = '<option value="all">All categories</option>';
+
+    for (const category of categories) {
+        options += `<option value="${category}">${category}</option>`;
+    }
+
+    selectElement.innerHTML = options;
 }
 
 export function updateText(element, text) {

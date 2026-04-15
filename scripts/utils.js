@@ -25,12 +25,27 @@ export function getTopCategory(products) {
         return "No data";
     }
 
-    const counts = products.reduce((totals, product) => {
-        const nextTotal = (totals[product.category] || 0) + 1;
-        return { ...totals, [product.category]: nextTotal };
-    }, {});
+    const counts = {};
 
-    return Object.entries(counts).sort((first, second) => second[1] - first[1])[0][0];
+    for (const product of products) {
+        if (!counts[product.category]) {
+            counts[product.category] = 0;
+        }
+
+        counts[product.category] += 1;
+    }
+
+    let topCategory = "No data";
+    let highestCount = 0;
+
+    for (const category in counts) {
+        if (counts[category] > highestCount) {
+            highestCount = counts[category];
+            topCategory = category;
+        }
+    }
+
+    return topCategory;
 }
 
 export function getAveragePrice(products) {
@@ -38,7 +53,12 @@ export function getAveragePrice(products) {
         return 0;
     }
 
-    const total = products.reduce((sum, product) => sum + product.price, 0);
+    let total = 0;
+
+    for (const product of products) {
+        total += product.price;
+    }
+
     return total / products.length;
 }
 
