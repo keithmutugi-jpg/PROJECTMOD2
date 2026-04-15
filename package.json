@@ -1,0 +1,9 @@
+{
+    "name": "keith-tech-store",
+    "version": "1.0.0",
+    "description": "Responsive vanilla CSS store project using a public API and unit tests.",
+    "type": "module",
+    "scripts": {
+        "test": "node --test"
+    }
+}
