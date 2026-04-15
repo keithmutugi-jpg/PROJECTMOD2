@@ -49,7 +49,6 @@ nav a:hover {
     color: #38bdf8;
 }
 
-/* HERO */
 .hero {
     height: 92vh;
     background:
@@ -74,7 +73,6 @@ nav a:hover {
     color: #94a3b8;
 }
 
-/* BUTTON */
 .hero button {
     padding: 12px 22px;
     background: #38bdf8;
@@ -91,13 +89,11 @@ nav a:hover {
     background: #0ea5e9;
 }
 
-/* ABOUT */
 .about {
     padding: 70px 20px;
     text-align: center;
 }
 
-/* SEARCH */
 .search {
     text-align: center;
     margin-bottom: 25px;
@@ -113,7 +109,6 @@ nav a:hover {
     outline: none;
 }
 
-/* PRODUCTS */
 .menu {
     padding: 60px 20px;
 }
@@ -124,14 +119,12 @@ nav a:hover {
     font-size: 28px;
 }
 
-/* GRID */
 .menu-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 22px;
 }
 
-/* CARD */
 .menu-item {
     background: #111827;
     border-radius: 16px;
@@ -144,14 +137,12 @@ nav a:hover {
     transform: translateY(-8px) rotate(-0.3deg);
 }
 
-/* IMAGE */
 .menu-item img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
 
-/* TEXT */
 .menu-item h3 {
     margin: 12px 0 6px;
 }
@@ -162,7 +153,6 @@ nav a:hover {
     color: #94a3b8;
 }
 
-/* BUTTON */
 .buyBtn {
     margin: 14px;
     padding: 10px;
@@ -174,7 +164,6 @@ nav a:hover {
     font-weight: 600;
 }
 
-/* FEATURES */
 .features {
     display: flex;
     justify-content: space-around;
@@ -184,7 +173,6 @@ nav a:hover {
     gap: 20px;
 }
 
-/* FOOTER */
 footer {
     background: #020617;
     text-align: center;
@@ -192,7 +180,6 @@ footer {
     color: #64748b;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
