@@ -3,89 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Keith Tech Store</title>
-    <meta
-        name="description"
-        content="Learn how Keith Tech Store uses a simple responsive design, three fonts, and a public API."
-    >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&family=Space+Mono:wght@400;700&display=swap"
-        rel="stylesheet"
-    >
+    <title>About Us | Keith Tech Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="subpage-header">
-        <nav class="nav-shell">
-            <a class="brand" href="index.html">Keith Tech Store</a>
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-            </button>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="is-active">About</a></li>
-                <li><a href="index.html#products">Products</a></li>
-            </ul>
-        </nav>
 
-        <section class="subpage-hero">
-            <p class="eyebrow">Project Overview</p>
-            <h1>A small project built to stay clean, responsive, and easy to explain.</h1>
-            <p>
-                The goal of this site is to show a simple real-world front-end project using live data,
-                structured styling, and a deployment workflow.
-            </p>
-        </section>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Products</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="about-hero">
+        <h1>Powering Your Digital World</h1>
+        <p>
+            Keith Tech Store delivers cutting-edge laptops, smartphones,
+            TVs, and accessories to keep you ahead in the digital era.
+        </p>
     </header>
 
-    <main>
-        <section class="info-strip">
-            <article>
-                <h2>Three Fonts</h2>
-                <p>Montserrat is used for headings, Open Sans for body text, and Space Mono for labels and stats.</p>
-            </article>
-            <article>
-                <h2>Three Main Colors</h2>
-                <p>The design centers on deep blue, warm orange, and soft cream to keep the palette controlled.</p>
-            </article>
-            <article>
-                <h2>Vanilla CSS</h2>
-                <p>No framework was used, so the layout and responsiveness come directly from CSS grid and flexbox.</p>
-            </article>
-        </section>
+    <!-- ABOUT INFO GRID -->
+    <section class="about-grid">
 
-        <section class="about-grid">
-            <article class="summary-card">
-                <p class="summary-label">How Data Works</p>
-                <h2>API Fetching</h2>
-                <p>The browser requests electronics products from Fake Store API and then displays them as cards.</p>
-            </article>
-            <article class="summary-card">
-                <p class="summary-label">How Testing Works</p>
-                <h2>Unit Tests</h2>
-                <p>Pure helper functions are tested because they are the easiest parts to verify automatically.</p>
-            </article>
-            <article class="summary-card">
-                <p class="summary-label">How Deployment Works</p>
-                <h2>GitHub Actions</h2>
-                <p>Every push to the main branch can run tests and deploy the static site to GitHub Pages.</p>
-            </article>
-        </section>
+        <div class="about-card">
+            <h2> Our Mission</h2>
+            <p>
+                To make modern technology affordable and accessible for everyone,
+                from students to professionals.
+            </p>
+        </div>
 
-        <section class="cta-panel">
-            <h2>See the live catalog in action.</h2>
-            <p>Return to the homepage to view the product grid loaded from the public API.</p>
-            <a class="button button-primary" href="index.html#products">View Products</a>
-        </section>
-    </main>
+        <div class="about-card">
+            <h2> Our Vision</h2>
+            <p>
+                To become a leading tech store in Africa providing quality gadgets
+                and excellent customer experience.
+            </p>
+        </div>
 
-    <footer class="site-footer">
-        <p>Simple structure, clear styling, and easy-to-follow JavaScript logic.</p>
-        <p>&copy; 2026 Keith Tech Store</p>
+        <div class="about-card">
+            <h2>  What We Offer</h2>
+            <p>
+                Laptops, smartphones, gaming consoles, smart TVs, and all essential tech accessories.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats">
+
+        <div>
+            <h2>500+</h2>
+            <p>Products Sold</p>
+        </div>
+
+        <div>
+            <h2>300+</h2>
+            <p>Happy Customers</p>
+        </div>
+
+        <div>
+            <h2>50+</h2>
+            <p>Brands Available</p>
+        </div>
+
+        <div>
+            <h2>24/7</h2>
+            <p>Support</p>
+        </div>
+
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta">
+        <h2>Ready to upgrade your tech?</h2>
+        <p>Explore our latest laptops, phones, and gadgets today.</p>
+        <a href="index.html" class="btn">Shop Now</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Keith Tech Store. All Rights Reserved.</p>
     </footer>
 
-    <script type="module" src="scripts/nav.js"></script>
 </body>
 </html>
