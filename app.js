@@ -1,31 +1,38 @@
 const API_URL = "https://fakestoreapi.com/products/category/electronics";
 
-const container = document.querySelector(".menu-items");
+const productContainer = document.querySelector(".menu-items");
 
 async function loadProducts() {
     try {
-        const res = await fetch(API_URL);
-        const products = await res.json();
+        const response = await fetch(API_URL);
+        const data = await response.json();
 
-        container.innerHTML = "";
+        // clear old content first
+        productContainer.innerHTML = "";
 
-        products.forEach(product => {
-            const card = document.createElement("div");
-            card.classList.add("menu-item");
+        data.forEach(item => {
+            const productCard = document.createElement("div");
+            productCard.classList.add("menu-item");
 
-            card.innerHTML = `
-                <img src="${product.image}" alt="${product.title}">
-                <h3>${product.title}</h3>
-                <p>$${product.price}</p>
+            productCard.innerHTML = `
+                <img src="${item.image}" alt="${item.title}">
+                <h3>${item.title}</h3>
+                <p>$${item.price}</p>
             `;
 
-            container.appendChild(card);
+            productContainer.appendChild(productCard);
         });
 
-    } catch (error) {
-        console.error("API error:", error);
-        container.innerHTML = "<p>Failed to load products</p>";
+    } catch (err) {
+        console.log("Something went wrong while loading products:", err);
+
+        productContainer.innerHTML = `
+            <p style="text-align:center; padding:20px;">
+                Could not load products. Please try again later.
+            </p>
+        `;
     }
 }
 
+// run it when page loads
 loadProducts();

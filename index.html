@@ -8,130 +8,111 @@
 </head>
 <body>
 
-    <!-- Navigation Bar -->
+    <!-- NAVBAR -->
     <nav>
+        <h2 class="logo">⚡ KeithTech</h2>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="#">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#products">Products</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Image -->
+    <!-- HERO SECTION -->
     <section class="hero">
-        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200" alt="Tech Store">
+        <div class="hero-content">
+            <h1>Next-Level Tech Starts Here</h1>
+            <p>Shop the latest laptops, phones, and gadgets at unbeatable prices.</p>
+            <button id="shopBtn">Shop Now</button>
+        </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ABOUT -->
     <section class="about">
         <h1>Welcome to Keith Tech Store</h1>
         <p>
-            Keith Tech Store is your one-stop destination for the latest laptops,
-            smartphones, televisions, and accessories.
-        </p>
-        <p>
-            From high-performance computers to cutting-edge mobile devices,
-            we provide quality products at affordable prices.
+            Your one-stop destination for laptops, smartphones, TVs, and accessories.
         </p>
     </section>
 
-    <!-- PRODUCTS SECTION (was menu) -->
-    <section class="menu">
-        <h2>Our Products</h2>
+    <!-- SEARCH BAR -->
+    <section class="search">
+        <input type="text" id="searchInput" placeholder="🔍 Search products...">
+    </section>
 
-        <div class="menu-items">
+    <!-- PRODUCTS -->
+    <section class="menu" id="products">
+        <h2> Our Products</h2>
 
-            <!-- LAPTOP -->
+        <div class="menu-items" id="productList">
+
             <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500" alt="Laptop">
+                <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500">
                 <h3>Laptop</h3>
-                <p>High-performance laptops for work, school, and gaming.</p>
+                <p>High-performance laptops for work and gaming.</p>
+                <button class="buyBtn">Buy Now</button>
             </div>
 
-            <!-- IPHONE -->
             <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1573148195900-7845dcb9b127?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aXBob25lJTIwcGhvbmVzfGVufDB8fDB8fHww" alt="iPhone">
+                <img src="https://images.unsplash.com/photo-1573148195900-7845dcb9b127?w=500">
                 <h3>iPhone</h3>
-                <p>Latest Apple iPhones with powerful features and sleek design.</p>
+                <p>Latest Apple iPhones with sleek design.</p>
+                <button class="buyBtn">Buy Now</button>
             </div>
 
-            <!-- ANDROID -->
             <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1707438095940-1eee18e85400?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YW5kcm9pZCUyMHBob25lc3xlbnwwfHwwfHx8MA%3D%3D" alt="Android Phone">
-                <h3>Android Phones</h3>
-                <p>Affordable and premium Android smartphones for everyone.</p>
+                <img src="https://images.unsplash.com/photo-1707438095940-1eee18e85400?w=500">
+                <h3>Android Phone</h3>
+                <p>Affordable and premium Android devices.</p>
+                <button class="buyBtn">Buy Now</button>
             </div>
 
-            <!-- TV -->
             <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=500" alt="Television">
+                <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=500">
                 <h3>Smart TV</h3>
-                <p>Enjoy crystal-clear entertainment with 4K smart TVs.</p>
-            </div>
-
-            <!-- HEADPHONES -->
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1518444065439-e933c06ce9cd?w=500" alt="Headphones">
-                <h3>Headphones</h3>
-                <p>Experience premium sound with wireless headphones.</p>
-            </div>
-
-            <!-- GAMING -->
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=500" alt="Gaming Console">
-                <h3>Gaming Console</h3>
-                <p>Next-gen gaming consoles for immersive gameplay.</p>
-            </div>
-
-            <!-- KEYBOARD -->
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1635896383799-06e1e0accda0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTY2fHxrZXlib2FyZHMlMjBhbmQlMjBtb3VzZXxlbnwwfHwwfHx8MA%3D%3D" alt="Accessories">
-                <h3>Keyboard</h3>
-                <p>We sell quality keyboards for your computer</p>
-            </div>
-
-            <!-- SMARTWATCH -->
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=500" alt="Smartwatch">
-                <h3>Smartwatch</h3>
-                <p>Track your health and stay connected on the go.</p>
-            </div>
-
-            <!-- SPEAKERS -->
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1589003077984-894e133dabab?w=500" alt="Speaker">
-                <h3>Bluetooth Speaker</h3>
-                <p>Portable speakers with powerful bass and clarity.</p>
-            </div>
-
-            <!-- MONITOR -->
-            <div class="menu-item">
-                <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500" alt="Monitor">
-                <h3>Computer Monitor</h3>
-                <p>High-resolution monitors for productivity and gaming.</p>
+                <p>Crystal-clear 4K entertainment.</p>
+                <button class="buyBtn">Buy Now</button>
             </div>
 
         </div>
     </section>
 
-    <!-- STORE HOURS -->
+    <!-- FEATURE SECTION -->
+    <section class="features">
+        <div>
+            <h3> Fast Delivery</h3>
+            <p>Get your tech delivered quickly.</p>
+        </div>
+        <div>
+            <h3> Secure Payments</h3>
+            <p>Safe and easy transactions.</p>
+        </div>
+        <div>
+            <h3> Top Quality</h3>
+            <p>Only the best products.</p>
+        </div>
+    </section>
+
+    <!-- HOURS -->
     <section class="hours">
         <h2>Store Hours</h2>
-        <p>Monday - Friday: 8:00 AM - 9:00 PM</p>
-        <p>Saturday: 9:00 AM - 10:00 PM</p>
-        <p>Sunday: 10:00 AM - 8:00 PM</p>
+        <p>Mon - Fri: 8AM - 9PM</p>
+        <p>Sat: 9AM - 10PM</p>
+        <p>Sun: 10AM - 8PM</p>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Keith Tech Store. All Rights Reserved.</p>
-        <p>
-            Follow us:
-            <a href="#">Facebook</a> |
-            <a href="#">Instagram</a> |
-            <a href="#">Twitter</a>
-        </p>
+        <p>&copy; 2026 Keith Tech Store</p>
     </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // SCROLL TO PRODUCTS
+        document.getElementById("shopBtn").addEventListener("click", () => {
+            document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
 
 </body>
 </html>
