@@ -7,7 +7,6 @@ async function loadProducts() {
         const response = await fetch(API_URL);
         const data = await response.json();
 
-        // clear old content first
         productContainer.innerHTML = "";
 
         data.forEach(item => {
@@ -34,5 +33,4 @@ async function loadProducts() {
     }
 }
 
-// run it when page loads
 loadProducts();

@@ -1,11 +1,9 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* BODY */
 body {
     font-family: system-ui, -apple-system, Segoe UI, sans-serif;
     background: #0b1220;
@@ -14,7 +12,6 @@ body {
     letter-spacing: 0.2px;
 }
 
-/* NAVBAR */
 nav {
     display: flex;
     justify-content: space-between;

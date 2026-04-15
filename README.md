@@ -6,7 +6,6 @@ When you’re just trying to buy a laptop or phone, you end up dealing with too 
 
 This makes it hard for beginners or first-time buyers to know what to pick.
 
----
 
 ## Solution
 Keith Tech Store is a simple and clean website made to help users easily browse tech products like laptops, phones, TVs, and accessories without stress.
@@ -15,7 +14,6 @@ Everything is displayed in a card layout so users can quickly see what each prod
 
 The goal is not to overcomplicate things — just a smooth browsing experience.
 
----
 
 ## What the website can do (MVP)
 
@@ -27,7 +25,6 @@ The goal is not to overcomplicate things — just a smooth browsing experience.
 - Check basic store info like working hours
 - Works well on phones, tablets, and laptops
 
----
 
 ### For admin (basic version)
 - Add or remove products directly in the HTML
@@ -36,14 +33,13 @@ The goal is not to overcomplicate things — just a smooth browsing experience.
 
 *(This is a simple front-end version, not a full backend system.)*
 
----
 
 ## Tech used
 
 ### Frontend
 - HTML
-- CSS (vanilla styling)
-- JavaScript (basic interactions)
+- CSS
+- JavaScript 
 
 ### Design style
 - Simple dark theme
@@ -51,7 +47,6 @@ The goal is not to overcomplicate things — just a smooth browsing experience.
 - Hover effects on product cards
 - Clean and minimal UI (no clutter)
 
----
 
 ## Future upgrade (optional)
 Later on, this project can be connected to a real API to load products automatically.
@@ -62,7 +57,6 @@ For example:
 
 This would allow products to update dynamically instead of being written manually in HTML.
 
----
 
 ## Final idea
 The main goal of Keith Tech Store is simplicity — making tech browsing feel easy, fast, and understandable for everyone.
