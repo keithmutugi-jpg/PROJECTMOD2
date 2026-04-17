@@ -31,9 +31,6 @@ The goal is not to overcomplicate things — just a smooth browsing experience.
 - Update product details manually when needed
 - Keep the layout and content up to date
 
-*(This is a simple front-end version, not a full backend system.)*
-
-
 ## Tech used
 
 ### Frontend
