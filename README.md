@@ -59,4 +59,4 @@ This would allow products to update dynamically instead of being written manuall
 
 
 ## Final idea
-The main goal of Keith Tech Store is simplicity — making tech browsing feel easy, fast, and understandable for everyone.git 
+The main goal of Keith Tech Store is simplicity — making tech browsing feel easy, fast, and understandable for everyone.
