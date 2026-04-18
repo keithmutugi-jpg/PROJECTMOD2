@@ -8,71 +8,96 @@
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav>
         <h2 class="logo"> KeithTech</h2>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="#products">Products</a></li>
-            
         </ul>
     </nav>
 
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Next-Level Tech Starts Here</h1>
-            <p>Shop the latest laptops, phones, and gadgets at unbeatable prices.</p>
-            <button id="shopBtn">Shop Now</button>
+            <h1>Next-Level Tech Starts Here </h1>
+            <p>Shop premium gadgets, latest devices & powerful tech.</p>
+            <button id="shopBtn"> Shop Now</button>
         </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="about">
         <h1>Welcome to Keith Tech Store</h1>
-        <p>
-            Your one-stop destination for laptops, smartphones, TVs, and accessories.
-        </p>
+        <p>Your one-stop destination for laptops, smartphones, TVs, and accessories.</p>
     </section>
 
+    <!-- SEARCH -->
     <section class="search">
         <input type="text" id="searchInput" placeholder="🔍 Search products...">
     </section>
 
+    <!-- PRODUCTS -->
     <section class="menu" id="products">
-        <h2> Our Products</h2>
+        <h2> Trending Products</h2>
 
         <div class="menu-items" id="productList">
 
+            <!-- PRODUCT 1 -->
             <div class="menu-item">
+                <span class="badge"> Hot</span>
                 <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500">
                 <h3>Laptop</h3>
                 <p>High-performance laptops for work and gaming.</p>
-                <button class="buyBtn">Buy Now</button>
+                <p class="price">$899</p>
+                <button class="buyBtn">🛒 Buy Now</button>
             </div>
 
+            <!-- PRODUCT 2 -->
             <div class="menu-item">
+                <span class="badge"> Popular</span>
                 <img src="https://images.unsplash.com/photo-1573148195900-7845dcb9b127?w=500">
                 <h3>iPhone</h3>
                 <p>Latest Apple iPhones with sleek design.</p>
-                <button class="buyBtn">Buy Now</button>
+                <p class="price">Ksh.999</p>
+                <button class="buyBtn"> Buy Now</button>
             </div>
 
+            <!-- PRODUCT 3 -->
             <div class="menu-item">
+                <span class="badge"> New</span>
                 <img src="https://images.unsplash.com/photo-1707438095940-1eee18e85400?w=500">
                 <h3>Android Phone</h3>
                 <p>Affordable and premium Android devices.</p>
-                <button class="buyBtn">Buy Now</button>
+                <p class="price">Ksh.499</p>
+                <button class="buyBtn"> Buy Now</button>
             </div>
 
+            <!-- PRODUCT 4 -->
             <div class="menu-item">
+                <span class="badge"> Best Deal</span>
                 <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=500">
                 <h3>Smart TV</h3>
                 <p>Crystal-clear 4K entertainment.</p>
-                <button class="buyBtn">Buy Now</button>
+                <p class="price">Ksh.699</p>
+                <button class="buyBtn"> Buy Now</button>
             </div>
 
+             <!-- PRODUCT 5 -->
+            <div class="menu-item">
+                <span class="badge"> Best Deal</span>
+                <img src="https://images.unsplash.com/photo-1587831990711-23ca6441447b?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                <h3>Monitor</h3>
+                <p>Crystal-clear display.</p>
+                <p class="price">Ksh.499</p>
+                <button class="buyBtn"> Buy Now</button>
+            </div>
+            
         </div>
     </section>
 
+    <!-- FEATURES -->
     <section class="features">
         <div>
             <h3> Fast Delivery</h3>
@@ -88,6 +113,7 @@
         </div>
     </section>
 
+    <!-- HOURS -->
     <section class="hours">
         <h2>Store Hours</h2>
         <p>Mon - Fri: 8AM - 9PM</p>
@@ -95,13 +121,36 @@
         <p>Sun: 10AM - 8PM</p>
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2026 Keith Tech Store</p>
+        <p>&copy; 2026 Keith Tech Store | Built by Keith </p>
     </footer>
 
+    <!-- JS -->
     <script>
+        // Smooth scroll
         document.getElementById("shopBtn").addEventListener("click", () => {
             document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+        });
+
+        // SEARCH FUNCTION
+        const searchInput = document.getElementById("searchInput");
+        const products = document.querySelectorAll(".menu-item");
+
+        searchInput.addEventListener("input", () => {
+            const value = searchInput.value.toLowerCase();
+
+            products.forEach(product => {
+                const name = product.innerText.toLowerCase();
+                product.style.display = name.includes(value) ? "block" : "none";
+            });
+        });
+
+        // BUY BUTTON CLICK
+        document.querySelectorAll(".buyBtn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                alert(" Item added to cart!");
+            });
         });
     </script>
 
