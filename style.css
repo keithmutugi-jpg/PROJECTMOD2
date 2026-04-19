@@ -320,6 +320,8 @@ nav a.active {
 .hero-box h1 {
     font-size: 3rem;
     background: linear-gradient(to right, #38bdf8, #6366f1);
+    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 
