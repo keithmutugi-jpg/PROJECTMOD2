@@ -6,7 +6,6 @@ When you’re just trying to buy a laptop or phone, you end up dealing with too 
 
 This makes it hard for beginners or first-time buyers to know what to pick.
 
-
 ## Solution
 Keith Tech Store is a simple and clean website made to help users easily browse tech products like laptops, phones, TVs, and accessories without stress.
 
